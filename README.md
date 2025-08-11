@@ -91,7 +91,7 @@ docker-compose down
 ## 🗂 Data Persistence
 
 The `data/` folder is mounted as a **Docker volume**.  
-When the container stops, the CSV remains available on your local machine.
+When the container stops, the CSV remains available on local machine.
 
 ---
 
@@ -121,15 +121,6 @@ pytest tests
 
 ---
 
-## 🛠 Tech Stack
-
-- **Python 3.10**
-- **Pandas** for data processing
-- **Requests** for API calls
-- **Docker Compose** for container orchestration
-
----
-
 ## 🗄 Database Schema (Optional)
 
 If storing in a relational database, recommended schema:
@@ -139,5 +130,19 @@ If storing in a relational database, recommended schema:
 - **locations**
 - **streets**
 
-(More details provided [here]())
+## Entity diagram
+
+<img width="437" height="817" alt="image" src="https://github.com/user-attachments/assets/84e1eb65-146b-47c9-94c3-d043a6db026d" />
+
+
+(More details provided [here](https://github.com/vasapranavi/stop_search_data/blob/main/database_design_and_data_handling_notes.md))
+
+---
+
+## 🛠 Tech Stack
+
+- **Python 3.10**
+- **Pandas** for data processing
+- **Requests** for API calls
+- **Docker Compose** for container orchestration
 
