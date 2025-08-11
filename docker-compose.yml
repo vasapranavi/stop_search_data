@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  stop_search_updater:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: stop_search_updater
+    volumes:
+      - ./data:/app/data  # Persist CSV outside container
+    working_dir: /app/src
+    command: python main.py --init
+    environment:
+      - PYTHONPATH=/app
+    restart: "no"  # change to always if you want it always running
