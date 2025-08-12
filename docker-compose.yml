@@ -8,6 +8,7 @@ services:
     container_name: stop_search_updater
     volumes:
       - ./data:/app/data  # Persist CSV outside container
+      - ./logs:/app/logs   # Persist logs outside container
     working_dir: /app/src
     command: python main.py --init
     environment:
